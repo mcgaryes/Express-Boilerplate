@@ -1,0 +1,46 @@
+<html>
+
+	<head>
+	
+		<!-- Meta -->
+		{{ if ( title ) { }}
+		<title>{{= title }}</title>
+		{{ } }}
+		
+		<!-- CSS Includes -->
+    	<link href="/css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    	<link href="/css/index.css" media="screen" rel="stylesheet" type="text/css" />
+    	{{ if ( location ) { }}
+    	<link href="/css/pages/{{= location }}.css" media="screen" rel="stylesheet" type="text/css" />
+    	{{ } }}
+    	
+    	<!-- JS Libraries -->
+    	<script type="text/javascript" src="/js/index.js"></script>
+    	{{ if ( location ) { }}
+    	<script type="text/javascript" src="/js/pages/{{= location }}.js"></script>
+    	{{ } }}
+    
+    </head>
+	
+	<body>
+		
+		<!-- Main Content Zone -->
+		<div id="wrapper">
+			<!-- Header -->
+			<div id="header"></div>
+			<!-- End Header -->
+			<div class="clear"></div>
+			<!-- Main Content Zone -->
+			<div id="content">
+				{{- body }}
+			</div>
+			<!-- End Main Content Zone -->
+			<div class="clear"></div>
+			<!-- Footer -->
+			<div id="footer" class=""></div>
+			<!-- End Footer -->
+		</div> 
+		<!-- End Main Content Zone -->
+	</body>
+	
+</html>
